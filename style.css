@@ -6,7 +6,7 @@ body {
 .main {
     min-height: 100vh;
     min-width: 100vw;
-    background: url("./assets/home.png");
+    background: url("./assets/home.png") no-repeat;
 }
 
 .ancients-list {
@@ -108,10 +108,63 @@ body {
     cursor: pointer;
     background: cadetblue;
     text-align: center;
-    transition: 2s all;
+    height: 40px;
 }
 
+
 .desk-js {
-    width: 130px;
-    height: 190px;
+    width: 270px;
+    height: 370px;
+}
+
+.desk-all {
+    display: none;
+    background: url("./assets/mythicCardBackground.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.desk {
+    display: flex;
+    /*justify-content: space-evenly;*/
+}
+
+.desk-tracker {
+    /*background: #d118ee;*/
+    /*opacity: 0.2;*/
+    text-align: center;
+    display: none;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    color: #a2ff00;
+    opacity: 1;
+    font-size: 30px;
+}
+
+.item-desk {
+    margin-left: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    width: 15px;
+    height: 40px;
+}
+
+.greenOne, .greenTwo, .greenThree{
+    margin-left: 0;
+    background: green;
+    /*border-radius: 50%;*/
+}
+
+.brownOne, .brownTwo, .brownThree {
+    background: #967a2f;
+    /*border-radius: 50%;*/
+}
+
+.blueOne, .blueTwo, .blueThree {
+    background: blue;
+    /*border-radius: 50%;*/
 }
