@@ -23,10 +23,23 @@ const ancientsData = [
         },
     },
 ]
-
+let massGreenRes = []
 function random(max) {
-    return Math.floor(Math.random() * (max))
-}
+    let res = 0
+    return zam()
+    function zam() {
+        res = Math.floor(Math.random() * (max))
+        if (!massGreenRes.includes(res)) {
+            massGreenRes.push(res)
+            return res
+        } else {
+            return random(max)
+        }
+}}
+
+// function random(max) {
+//     return  Math.floor(Math.random() * (max))
+// }
 
 // const deskAll = document.querySelector('.desk-all')
 const deskTracker = document.querySelector('.desk-tracker')
@@ -205,6 +218,7 @@ deskBtn.addEventListener('click', () => {
             roundOne[2].push(random(blueMass.length))
         }
     console.log(roundOne)
+    massGreenRes = []
             for (let i = 0; i < Azzot.secondRound[0]; i++) {
                 roundTwo[0].push(random(greenMass.length))
             }
@@ -214,6 +228,7 @@ deskBtn.addEventListener('click', () => {
             for (let i = 0; i < Azzot.secondRound[2]; i++) {
                 roundTwo[2].push(random(blueMass.length))
             }
+    massGreenRes = []
     console.log(roundTwo)
                 for (let i = 0; i < Azzot.thirtyRound[0]; i++) {
                     roundThree[0].push(random(greenMass.length))
@@ -224,6 +239,7 @@ deskBtn.addEventListener('click', () => {
                 for (let i = 0; i < Azzot.thirtyRound[2]; i++) {
                     roundThree[2].push(random(blueMass.length))
                 }
+    massGreenRes = []
     console.log(roundThree)
 
     // let info = roundOne[0].concat(roundOne[2]).concat(roundOne[1])
